@@ -37,10 +37,18 @@ public class Main {
 
                 System.out.println("Tipo: Bicicleta Eléctrica | Código: " + biciE.getCodigoBicicleta() +
                         " | Año: " + biciE.getAnyoFabricacion() +
-                        " | Peso: " + biciE.getPeso() + " kg | Autonomía: " + biciE.getAutonomia() +
+                        " | Peso: " + biciE.getPeso() + " kg | Autonomia: " + biciE.getAutonomia() +
                         " km | Batería certificada: " + bateriaStr);
-                System.out.println("  Garantía extendida: " + garantiaStr +
+                System.out.println("  Garantia extendida: " + garantiaStr +
                         " | Costo mantención: $" + (int)biciE.calcularCostoMantencion());
+
+            } else if (encontrada instanceof BicicletaMontanya) {
+                BicicletaMontanya biciM = (BicicletaMontanya) encontrada;
+
+                System.out.println("Tipo: Bicicleta de Montaña | Código: " + biciM.getCodigoBicicleta() +
+                        " | Año: " + biciM.getAnyoFabricacion() +
+                        " | Peso: " + biciM.getPeso() + " kg | Suspensiones: " + biciM.getCantidadSuspension() +
+                        " | Costo mantención: $" + (int)biciM.calcularCostoMantencion());
             }
         }
         System.out.println("---\n");

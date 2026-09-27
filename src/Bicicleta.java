@@ -1,8 +1,11 @@
-public class Bicicleta {
+public abstract class Bicicleta {
 
     private String codigoBicicleta;
     private int anyoFabricacion;
     private double peso;
+
+    public Bicicleta() {
+    }
 
     public Bicicleta(String codigoBicicleta, int anyoFabricacion, double peso) {
         setCodigoBicicleta(codigoBicicleta);
@@ -43,8 +46,11 @@ public class Bicicleta {
         this.peso = peso;
     }
 
-    public double calcularCostoMantencion() {
-        return 0; // Por defecto retorna 0, las hijas cambiarán este valor
+    public abstract double calcularCostoMantencion();
+
+    @Override
+    public String toString() {
+        return "Código: " + codigoBicicleta + " | Año: " + anyoFabricacion;
     }
 }
 
